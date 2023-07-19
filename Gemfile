@@ -9,6 +9,7 @@ gem "rails", "~> 7.0.6"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem "devise", "~> 4.9"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -49,7 +50,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'rspec-rails', '~> 6.0.0'
+  gem 'rubocop-rails', require: false
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
@@ -64,3 +66,9 @@ group :development do
   # gem "spring"
 end
 
+
+gem "asset_ram", "~> 1.0"
+
+gem "tailwindcss-rails", "~> 2.0"
+
+gem "foreman", "~> 0.87.2"
